@@ -16,3 +16,28 @@
     ~/.config/yazi: .config/yazi
     ~/.config/starship.toml: .config/starship.toml
     ~/wallpaper: wallpaper
+
+- shell:
+  - command: |
+      bash -c '
+      if ! command -v paru &> /dev/null; then
+        echo "Paru not found. Starting build and installation..."
+        sudo pacman -S --needed --noconfirm base-devel git
+        git clone https://aur.archlinux.org/paru.git /tmp/paru
+        cd /tmp/paru && makepkg -si --noconfirm && rm -rf /tmp/paru
+      else
+        echo "Paru is already installed."
+      fi
+      '
+    description: "Checking and installing paru"
+    stdin: true
+    quiet: true
+    stdout: true
+    stderr: true
+
+  - command: bash -c 'paru -S --needed --noconfirm $(cat pkg.txt)'
+    description: "Installing all packages (Official + AUR)"
+    stdin: true
+    quiet: true
+    stdout: true
+    stderr: true
