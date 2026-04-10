@@ -1,0 +1,63 @@
+# Author: Nuncvc1v0
+
+log_level = "warn"
+outputs = { Targets = ["eDP-1"] }
+position = "Top"
+app_launcher_cmd = "anyrun"
+
+[modules]
+left = [ "Workspaces", "WindowTitle" ]
+center = ["Clock" ]
+# Добавил Battery и Network прямо на панель для удобства
+right = [ "SystemInfo", "Battery", "Network", [ "KeyboardLayout", "Tray", "Privacy", "Settings" ] ]
+
+[workspaces]
+enable_workspace_filling = true
+
+[window_title]
+mode = "Title"
+truncate_title_after_length = 100
+
+[keyboard_layout.labels]
+"English (US)" = "En"
+"Russian" = "Ru"
+
+[settings]
+shutdown_cmd = "systemctl poweroff"
+suspend_cmd = "systemctl suspend"
+reboot_cmd = "systemctl reboot"
+logout_cmd = "uwsm stop"
+
+remove_airplane_btn = true
+remove_idle_btn = true
+
+wifi_more_cmd = "iwgtk"
+vpn_more_cmd = "iwgtk"
+bluetooth_more_cmd = "blueberry"
+
+indicators = ["Battery", "Bluetooth", "Network", "Audio"]
+battery_format = "IconAndPercentage"
+lock_cmd = "playerctl --all-players pause; hyprlock &"
+
+[appearance]
+success_color = "#9ece6a" # Tokyo Night Green
+text_color = "#c0caf5"    # Tokyo Night FG
+
+workspace_colors = [ "#7aa2f7", "#bb9af7", "#7dcfff" ]
+
+[appearance.primary_color]
+base = "#7aa2f7" # Tokyo Night Blue
+text = "#1a1b26" # Tokyo Night BG
+
+[appearance.danger_color]
+base = "#f7768e" # Tokyo Night Red
+weak = "#e0af68" # Tokyo Night Yellow
+
+[appearance.background_color]
+base = "#1a1b26" # Deep Tokyo Night BG
+weak = "#24283b"
+strong = "#414868"
+
+[appearance.secondary_color]
+base = "#16161e"
+strong = "#1a1b26"
