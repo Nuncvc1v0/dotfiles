@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/hypr: .config/hypr
+    ~/.config/alacritty: .config/alacritty
+    ~/.config/ashell: .config/ashell
+    ~/.config/fish: .config/fish
+    ~/.config/paru: .config/paru
+    ~/.config/swayosd: .config/swayosd
+    ~/.config/waypaper: .config/waypaper
+    ~/.config/yazi: .config/yazi
+    ~/.config/starship.toml: .config/starship.toml
+    ~/wallpaper: wallpaper
