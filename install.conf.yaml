@@ -7,7 +7,6 @@
 
 - link:
     ~/.config/hypr: .config/hypr
-    ~/.config/alacritty: .config/alacritty
     ~/.config/ashell: .config/ashell
     ~/.config/fish: .config/fish
     ~/.config/paru: .config/paru
@@ -16,6 +15,8 @@
     ~/.config/yazi: .config/yazi
     ~/.config/starship.toml: .config/starship.toml
     ~/wallpaper: wallpaper
+    ~/.config/wezterm: .config/wezterm
+
 
 - shell:
   - command: |

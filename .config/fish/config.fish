@@ -15,8 +15,8 @@ alias exa1='exa --tree --level=1'
 alias exa2='exa --tree --level=2'
 alias exa3='exa --tree --level=3'
 
-alias cat="bat"
-alias catp="bat --style=plain"
+alias cat="btm"
+alias bat="btm"
 
 alias find="fd"
 alias grep="rg"
