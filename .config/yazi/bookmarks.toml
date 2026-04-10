@@ -1,0 +1,28 @@
+# Author: Nuncvc1v0
+
+# Yazi bookmarks configuration
+# Quick navigation with 'g' + key
+
+[bookmarks]
+# Home directory
+h = "~"
+
+# Custom directories
+d = "/data"
+g = "/games"
+
+# System directories
+r = "/"
+t = "/tmp"
+
+# Media (USB drives, external storage)
+m = "/run/media/$USER"
+
+# Downloads
+D = "~/Downloads"
+
+# Documents
+c = "~/Documents"
+
+# Config
+C = "~/.config"

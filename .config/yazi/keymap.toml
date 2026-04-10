@@ -1,0 +1,15 @@
+# Author: Nuncvc1v0
+
+# Yazi keymaps configuration
+# Custom key bindings
+
+[manager]
+# Add custom keybindings here
+
+keymap = [
+    { on = [ "z", "h" ], exec = "hidden toggle", desc = "Toggle hidden files" },
+
+# Mount USB devices
+    { on = [ "m", "m" ], exec = '''shell 'udisksctl mount -b "$(lsblk -nrpo "name,type,size,mountpoint" | fzf | awk "{print $1}")" --no-user-interaction' --block --confirm''', desc = "Mount device" },
+    { on = [ "m", "u" ], exec = '''shell 'udisksctl unmount -b "$(lsblk -nrpo "name,type,size,mountpoint" | grep -v "/$" | fzf | awk "{print $1}")" --no-user-interaction' --block --confirm''', desc = "Unmount device" },
+]

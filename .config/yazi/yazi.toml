@@ -1,0 +1,8 @@
+# Author: Nuncvc1v0
+
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[mgr]
+sort_by="natural"
+sort_translit=true
+show_hidden=true
