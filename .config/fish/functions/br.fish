@@ -1,0 +1,1 @@
+/home/nuncvc1v0/.local/share/broot/launcher/fish/br.fish

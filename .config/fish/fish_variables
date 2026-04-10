@@ -1,0 +1,6 @@
+# Author: Nuncvc1v0
+
+# This file contains fish universal variable definitions.
+SETUVAR __fish_initialized:4300
+SETUVAR fish_greeting:\x1d
+SETUVAR fish_user_paths:/home/nuncvc1v0/\x2elocal/bin
